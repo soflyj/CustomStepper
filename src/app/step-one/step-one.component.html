@@ -1,0 +1,12 @@
+<form [formGroup]="step">
+  <ng-template matStepLabel>Personal Information</ng-template>
+  <mat-form-field>
+    <input matInput placeholder="First name" formControlName="firstName" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Last name" formControlName="lastName" required>
+  </mat-form-field>
+  <div>
+    <button mat-button matStepperNext (click)="Next()" [disabled]="!step.valid">Next</button>
+  </div>
+</form>

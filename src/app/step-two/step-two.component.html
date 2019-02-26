@@ -1,0 +1,17 @@
+<form [formGroup]="step">
+  <ng-template matStepLabel>Vehicle</ng-template>
+  <mat-form-field>
+    <input matInput placeholder="Make" formControlName="make" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Model" formControlName="model" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Year" formControlName="year" required>
+  </mat-form-field>
+
+  <div>
+      <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext (click)="Next()" [disabled]="!step.valid">Next</button>
+  </div>
+</form>
